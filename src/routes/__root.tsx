@@ -1,9 +1,29 @@
 import { Outlet, createRootRoute } from '@tanstack/react-router'
 import React from 'react'
 
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Ocean Express Navegação',
+  description: 'Travessias seguras de Mangaratiba para Ilha Grande',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Centro',
+    addressLocality: 'Mangaratiba',
+    addressRegion: 'RJ',
+    addressCountry: 'BR',
+  },
+  telephone: '+5521973521017',
+  url: 'https://oceanexpressnavegacao.com.br',
+  priceRange: '$$',
+}
+
 export const Route = createRootRoute({
   component: () => (
     <div className="min-h-screen flex flex-col bg-white">
+      {/* LocalBusiness Schema */}
+      <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
+
       {/* Header */}
       <header className="bg-ocean-navy text-white py-4 px-6 shadow-md">
         <div className="container mx-auto flex items-center justify-between">
@@ -34,7 +54,7 @@ export const Route = createRootRoute({
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/5521XXXXXXX?text=Olá! Quero saber mais sobre as travessias"
+        href="https://wa.me/5521973521017?text=Olá! Quero saber mais sobre as travessias"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all hover:scale-110 z-50"

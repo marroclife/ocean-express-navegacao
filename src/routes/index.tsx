@@ -17,7 +17,7 @@ function Home() {
             Do Centro de Mangaratiba direto para o paraíso
           </p>
           <a
-            href="https://wa.me/5521XXXXXXX?text=Olá! Quero saber mais sobre a travessia para Ilha Grande"
+            href="https://wa.me/5521973521017?text=Olá! Quero saber mais sobre a travessia para Ilha Grande"
             className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-all hover:scale-105"
           >
             Reserve sua Travessia 🚀
@@ -128,7 +128,7 @@ function Home() {
         <h3 className="text-3xl font-bold mb-4">Pronto para a sua próxima aventura?</h3>
         <p className="text-lg mb-8">Entre em contato agora mesmo!</p>
         <a
-          href="https://wa.me/5521XXXXXXX?text=Olá! Quero saber mais sobre as travessias"
+          href="https://wa.me/5521973521017?text=Olá! Quero saber mais sobre as travessias"
           className="inline-block bg-ocean-navy hover:bg-blue-900 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-all hover:scale-105"
         >
           Reservar via WhatsApp 🚢
