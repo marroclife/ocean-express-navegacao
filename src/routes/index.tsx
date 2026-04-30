@@ -67,9 +67,9 @@ export default function Home() {
       </section>
 
       {/* Services Sub-hero */}
-      <section className="py-32 px-6">
+      <section className="py-20 md:py-32 px-6">
         <div className="container mx-auto">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once:true, margin:"-150px" }} variants={staggerContainer} className="grid md:grid-cols-3 gap-10 relative mt-[-140px] z-40">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once:true, margin:"-150px" }} variants={staggerContainer} className="grid md:grid-cols-3 gap-8 md:gap-10 relative mt-[-60px] md:mt-[-140px] z-40">
             {/* Card 1 */}
             <motion.div variants={fadeUp} className="glass-premium p-12 rounded-[2rem] group cursor-default">
               <Palmtree className="w-12 h-12 text-[#c9a050] mb-8 group-hover:rotate-12 transition-transform duration-500" strokeWidth={1} />
@@ -167,29 +167,29 @@ export default function Home() {
             <div className="flex select-none cursor-grab active:cursor-grabbing">
               {/* Slide 1 */}
               <div className="flex-[0_0_100%] min-w-0 px-4 md:px-12 text-center text-white">
-                <div className="font-serif text-[100px] leading-none text-sand-gold mb-0 h-14 drop-shadow-md">"</div>
-                <p className="text-[32px] md:text-[44px] italic font-serif leading-[1.3] text-white tracking-wide mb-14 drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)] pb-2 text-shadow-sm">
+                <div className="font-serif text-[60px] md:text-[100px] leading-none text-sand-gold mb-0 h-10 md:h-14 drop-shadow-md">"</div>
+                <p className="text-[24px] md:text-[40px] italic font-serif leading-[1.3] text-white tracking-wide mb-10 md:mb-14 drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)] pb-2 text-shadow-sm">
                   Excelente serviço. Fomos orientados por whatsapp desde SP até chegarmos no cais em Mangaratiba. A travessia foi hiper suave.
                 </p>
-                <div className="flex items-center justify-center gap-6">
-                   <img src={IMG_PERSON1} className="w-20 h-20 rounded-full object-cover border-4 border-sand-gold" alt="Joana Alves" draggable="false" />
+                <div className="flex items-center justify-center gap-4 md:gap-6">
+                   <img src={IMG_PERSON1} className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-4 border-sand-gold" alt="Joana Alves" draggable="false" />
                    <div className="text-left">
-                     <h5 className="font-serif font-bold text-2xl tracking-[0.05em]">Joana Alves</h5>
-                     <p className="font-sans text-ocean-foam text-sm tracking-widest uppercase mt-1">São Paulo, SP</p>
+                     <h5 className="font-serif font-bold text-xl md:text-2xl tracking-[0.05em]">Joana Alves</h5>
+                     <p className="font-sans text-ocean-foam text-[10px] md:text-sm tracking-widest uppercase mt-1">São Paulo, SP</p>
                    </div>
                 </div>
               </div>
               {/* Slide 2 */}
               <div className="flex-[0_0_100%] min-w-0 px-4 md:px-12 text-center text-white">
-                <div className="font-serif text-[100px] leading-none text-sand-gold mb-0 h-14 drop-shadow-md">"</div>
-                <p className="text-[32px] md:text-[44px] italic font-serif leading-[1.3] text-white tracking-wide mb-14 drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)] pb-2 text-shadow-sm">
+                <div className="font-serif text-[60px] md:text-[100px] leading-none text-sand-gold mb-0 h-10 md:h-14 drop-shadow-md">"</div>
+                <p className="text-[24px] md:text-[40px] italic font-serif leading-[1.3] text-white tracking-wide mb-10 md:mb-14 drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)] pb-2 text-shadow-sm">
                   Nossa família ficou preocupada com maresia, mas o catamarã deles é fenomenal. Chegamos na Ilha Grande rindo à toa!
                 </p>
-                <div className="flex items-center justify-center gap-6">
-                   <img src={IMG_PERSON2} className="w-20 h-20 rounded-full object-cover border-4 border-sand-gold" alt="Fernando Souza" draggable="false" />
+                <div className="flex items-center justify-center gap-4 md:gap-6">
+                   <img src={IMG_PERSON2} className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-4 border-sand-gold" alt="Fernando Souza" draggable="false" />
                    <div className="text-left">
-                     <h5 className="font-serif font-bold text-2xl tracking-[0.05em]">Fernando Souza</h5>
-                     <p className="font-sans text-ocean-foam text-sm tracking-widest uppercase mt-1">Rio de Janeiro, RJ</p>
+                     <h5 className="font-serif font-bold text-xl md:text-2xl tracking-[0.05em]">Fernando Souza</h5>
+                     <p className="font-sans text-ocean-foam text-[10px] md:text-sm tracking-widest uppercase mt-1">Rio de Janeiro, RJ</p>
                    </div>
                 </div>
               </div>
