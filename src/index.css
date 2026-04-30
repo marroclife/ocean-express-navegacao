@@ -5,11 +5,13 @@
 @layer base {
   body {
     font-family: 'Inter', sans-serif;
-    color: #0a1628;
+    color: #1e3a5f;
     background-color: #fafbfc;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
   }
 }
 
@@ -22,31 +24,50 @@
     box-shadow: 0 8px 32px rgba(10, 22, 40, 0.1);
   }
   
-  .btn-primary {
+  .glass- premium {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(232, 244, 248, 0.95) 100%);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 40px rgba(10, 22, 40, 0.08);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
+  }
+  .glass-premium:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(10, 22, 40, 0.15);
+  }
+  
+  .btn-luxury {
     background: linear-gradient(90deg, #c9a050, #e07a5f);
     border: none;
     border-radius: 50px;
-    padding: 16px 40px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+    padding: 18px 48px;
+    font-weight: 700;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    font-size: 14px;
-    transition: all 0.3s ease;
+    font-size: 15px;
+    font-family: 'Playfair Display', serif;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 15px rgba(192, 160, 80, 0.3);
     color: white;
     display: inline-block;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
   }
-  .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(192, 160, 80, 0.4);
+  .btn-luxury::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%; width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.5s ease-in-out;
+  }
+  .btn-luxury:hover::before {
+    left: 100%;
+  }
+  .btn-luxury:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(192, 160, 80, 0.4);
     color: white;
-  }
-  
-  .service-card {
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
-  }
-  .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(10, 22, 40, 0.15);
   }
 }
