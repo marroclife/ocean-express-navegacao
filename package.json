@@ -9,6 +9,9 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "engines": {
+    "node": "22.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marroclife/ocean-express-navegacao.git"
