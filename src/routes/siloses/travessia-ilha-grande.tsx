@@ -1,14 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
-
-export const Route = createFileRoute('/siloses/travessia-ilha-grande')({
-  component: SiloIlhaGrande,
-  head: () => ({
-    meta: [
-      { title: 'Travessia para Ilha Grande saindo de Mangaratiba | Ocean Express' },
-      { name: 'description', content: 'Travessia segura de Mangaratiba para Ilha Grande. Embarcações modernas, horários diários. Reserve pelo WhatsApp!' },
-    ],
-  }),
-})
+import { useState } from 'react'
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -60,7 +50,8 @@ const faqSchema = {
 const WA_URL =
   'https://wa.me/5521973521017?text=Olá! Quero saber mais sobre a travessia para Ilha Grande'
 
-function SiloIlhaGrande() {
+export default function SiloIlhaGrande() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null)
   return (
     <div>
       {/* SEO / FAQ Schema */}

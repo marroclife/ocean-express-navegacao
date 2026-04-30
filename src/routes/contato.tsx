@@ -1,19 +1,8 @@
-import { createFileRoute } from '@tanstack/react-router'
-import React, { useState } from 'react'
-
-export const Route = createFileRoute('/contato')({
-  component: Contato,
-  head: () => ({
-    meta: [
-      { title: 'Contato | Ocean Express Navegação — Mangaratiba' },
-      { name: 'description', content: 'Entre em contato com a Ocean Express Navegação. Reserve sua travessia de Mangaratiba para Ilha Grande pelo WhatsApp ou formulário.' },
-    ],
-  }),
-})
+import { useState } from 'react'
 
 const WA_BASE = 'https://wa.me/5521973521017?text='
 
-function Contato() {
+export default function Contato() {
   const [nome, setNome] = useState('')
   const [telefone, setTelefone] = useState('')
   const [mensagem, setMensagem] = useState('')

@@ -1,10 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
-
-export const Route = createFileRoute('/')({
-  component: Home,
-})
-
-function Home() {
+export default function Home() {
   return (
     <div>
       {/* Hero Section */}
@@ -109,7 +103,7 @@ function Home() {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white p-6 rounded-xl shadow">
               <p className="text-gray-700 italic mb-4">
-                "Travessia incrível! Chegamos快速 e com segurança. Recomendo demais!"
+                "Travessia incrível! Chegamos rápido e com segurança. Recomendo demais!"
               </p>
               <p className="font-bold text-ocean-navy">— Maria S.</p>
             </div>

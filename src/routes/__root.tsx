@@ -1,5 +1,4 @@
-import { Outlet, createRootRoute } from '@tanstack/react-router'
-import React from 'react'
+import { Outlet, Link } from 'react-router-dom'
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -18,8 +17,8 @@ const localBusinessSchema = {
   priceRange: '$$',
 }
 
-export const Route = createRootRoute({
-  component: () => (
+export default function RootLayout() {
+  return (
     <div className="min-h-screen flex flex-col bg-white">
       {/* LocalBusiness Schema */}
       <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
@@ -32,9 +31,12 @@ export const Route = createRootRoute({
             <h1 className="text-xl font-bold">Ocean Express</h1>
           </div>
           <nav className="hidden md:flex gap-6">
-            <a href="/" className="hover:text-ocean-gold transition-colors">Início</a>
-            <a href="/siloses/travessia-ilha-grande" className="hover:text-ocean-gold transition-colors">Ilha Grande</a>
-            <a href="/contato" className="hover:text-ocean-gold transition-colors">Contato</a>
+            <Link to="/" className="hover:text-ocean-gold transition-colors">Início</Link>
+            <Link to="/siloses/travessia-ilha-grande" className="hover:text-ocean-gold transition-colors">Ilha Grande</Link>
+            <Link to="/sobre" className="hover:text-ocean-gold transition-colors">Sobre Nós</Link>
+            <Link to="/galeria" className="hover:text-ocean-gold transition-colors">Galeria</Link>
+            <Link to="/blog" className="hover:text-ocean-gold transition-colors">Blog</Link>
+            <Link to="/contato" className="hover:text-ocean-gold transition-colors">Contato</Link>
           </nav>
         </div>
       </header>
@@ -65,7 +67,5 @@ export const Route = createRootRoute({
         </svg>
       </a>
     </div>
-  ),
-})
-
-export const RouteWithOutlet = () => <Outlet />
+  )
+}
