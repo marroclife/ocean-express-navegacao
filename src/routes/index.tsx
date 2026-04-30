@@ -20,7 +20,7 @@ export default function Home() {
 
   const fadeUp = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease: "easeOut" } }
   }
 
   const staggerContainer = {
@@ -40,7 +40,7 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-20 text-center flex flex-col items-center">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }}
-            className="text-5xl md:text-7xl lg:text-[5.5rem] text-white mb-6 drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)] font-bold tracking-tight leading-[1.1]"
+            className="text-5xl md:text-7xl lg:text-[5.5rem] text-sand-gold mb-6 drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)] font-bold tracking-tight leading-[1.1]"
           >
             A Travessia Mais<br/>Segura do Rio
           </motion.h1>
@@ -106,7 +106,7 @@ export default function Home() {
         {/* Trust Header */}
         <div className="container mx-auto relative z-20 pt-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once:true }} variants={fadeUp} className="text-center mb-28 max-w-4xl mx-auto">
-            <h2 className="text-5xl md:text-[54px] font-serif font-bold mb-8 text-white drop-shadow-md tracking-tight">O Padrão Ouro da Navegação Costeira</h2>
+            <h2 className="text-5xl md:text-[54px] font-serif font-bold mb-8 text-sand-gold drop-shadow-lg tracking-tight">O Padrão Ouro da Navegação Costeira</h2>
             <p className="text-ocean-foam text-[20px] font-light leading-relaxed">
               Elevando as referências mundiais de traslado contínuo marítimo com frota moderna e tripulação extremamente treinada.
             </p>

@@ -20,9 +20,7 @@ module.exports = {
         coral: {
           accent: '#e07a5f',
         },
-        white: {
-          soft: '#fafbfc'
-        }
+        'white-soft': '#fafbfc',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

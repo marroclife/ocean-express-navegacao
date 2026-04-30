@@ -26,17 +26,17 @@ export default function RootLayout() {
       {/* Navbar Glass */}
       <header className="fixed top-0 w-full z-[100] backdrop-blur-md bg-ocean-abyss/85 border-b border-white/5 shadow-md transition-all duration-300">
         <div className="container mx-auto px-6 py-5 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3 text-white group">
+          <Link to="/" className="flex items-center gap-3 group">
             <Ship className="w-8 h-8 text-sand-gold group-hover:rotate-12 transition-transform duration-500" strokeWidth={1.5} />
-            <h1 className="text-2xl font-serif font-bold tracking-wide text-white">Ocean Express</h1>
+            <h1 className="text-2xl font-serif font-bold tracking-wide text-sand-gold drop-shadow-md">Ocean Express</h1>
           </Link>
           <nav className="hidden md:flex gap-10">
-            <Link to="/" className="text-white hover:text-sand-gold text-[13px] font-bold uppercase tracking-[0.15em] transition-colors">Início</Link>
-            <Link to="/siloses/travessia-ilha-grande" className="text-white hover:text-sand-gold text-[13px] font-bold uppercase tracking-[0.15em] transition-colors">Ilha Grande</Link>
-            <Link to="/sobre" className="text-white hover:text-sand-gold text-[13px] font-bold uppercase tracking-[0.15em] transition-colors">Sobre</Link>
-            <Link to="/galeria" className="text-white hover:text-sand-gold text-[13px] font-bold uppercase tracking-[0.15em] transition-colors">Galeria</Link>
-            <Link to="/blog" className="text-white hover:text-sand-gold text-[13px] font-bold uppercase tracking-[0.15em] transition-colors">Blog</Link>
-            <Link to="/contato" className="text-white hover:text-sand-gold text-[13px] font-bold uppercase tracking-[0.15em] transition-colors">Contato</Link>
+            <Link to="/" className="text-sand-gold hover:text-white text-[13px] font-bold uppercase tracking-[0.15em] transition-colors drop-shadow-sm">Início</Link>
+            <Link to="/siloses/travessia-ilha-grande" className="text-sand-gold hover:text-white text-[13px] font-bold uppercase tracking-[0.15em] transition-colors drop-shadow-sm">Ilha Grande</Link>
+            <Link to="/sobre" className="text-sand-gold hover:text-white text-[13px] font-bold uppercase tracking-[0.15em] transition-colors drop-shadow-sm">Sobre</Link>
+            <Link to="/galeria" className="text-sand-gold hover:text-white text-[13px] font-bold uppercase tracking-[0.15em] transition-colors drop-shadow-sm">Galeria</Link>
+            <Link to="/blog" className="text-sand-gold hover:text-white text-[13px] font-bold uppercase tracking-[0.15em] transition-colors drop-shadow-sm">Blog</Link>
+            <Link to="/contato" className="text-sand-gold hover:text-white text-[13px] font-bold uppercase tracking-[0.15em] transition-colors drop-shadow-sm">Contato</Link>
           </nav>
         </div>
       </header>
