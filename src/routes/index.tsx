@@ -4,7 +4,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import { useEffect } from 'react'
 
 // B2B Hero — Mangaratiba coastal port scenery
-const IMG_HERO = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2000'
+const IMG_HERO = 'https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?q=80&w=2000'
 const IMG_AGENT1 = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop'
 const IMG_AGENT2 = 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop'
 const IMG_AGENT3 = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=150&auto=format&fit=crop'
