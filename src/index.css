@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --ancora-red: #8B0000;
+  --ancora-red-light: #a50000;
+  --ancora-red-glow: rgba(139, 0, 0, 0.35);
+}
+
 @layer base {
   body {
     font-family: 'Inter', sans-serif;
@@ -10,22 +16,23 @@
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
     line-height: 1.2;
   }
 }
 
 @layer components {
+  /* Glassmorphism card for service cards */
   .glass-card {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: 0 8px 32px rgba(10, 22, 40, 0.1);
   }
-  
-  .glass- premium {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(232, 244, 248, 0.95) 100%);
+
+  .glass-premium {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.97) 0%, rgba(232, 244, 248, 0.95) 100%);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     border: 1px solid rgba(255, 255, 255, 0.8);
@@ -34,9 +41,81 @@
   }
   .glass-premium:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(10, 22, 40, 0.15);
+    box-shadow: 0 20px 50px rgba(139, 0, 0, 0.12);
   }
-  
+
+  /* Glassmorphism service card — dark background variant */
+  .glass-service-card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  }
+  .glass-service-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(139, 0, 0, 0.4);
+    box-shadow: 0 20px 50px rgba(139, 0, 0, 0.2);
+  }
+
+  /* PRIMARY CTA Button — Âncora Red */
+  .btn-ancora {
+    background: linear-gradient(135deg, #8B0000, #a50000);
+    border: none;
+    border-radius: 50px;
+    padding: 18px 48px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 24px var(--ancora-red-glow);
+    color: white;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-ancora::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%; width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+    transition: left 0.5s ease-in-out;
+  }
+  .btn-ancora:hover::before {
+    left: 100%;
+  }
+  .btn-ancora:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 36px rgba(139, 0, 0, 0.5);
+    color: white;
+  }
+
+  /* Secondary ghost button */
+  .btn-ghost-ancora {
+    border: 2px solid var(--ancora-red);
+    border-radius: 50px;
+    padding: 16px 44px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    color: var(--ancora-red);
+    display: inline-block;
+    background: transparent;
+  }
+  .btn-ghost-ancora:hover {
+    background: var(--ancora-red);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px var(--ancora-red-glow);
+  }
+
+  /* Legacy luxury button kept for compatibility */
   .btn-luxury {
     background: linear-gradient(90deg, #c9a050, #e07a5f);
     border: none;
@@ -69,5 +148,19 @@
     transform: translateY(-4px);
     box-shadow: 0 12px 30px rgba(192, 160, 80, 0.4);
     color: white;
+  }
+
+  /* Trade tag badge */
+  .tag-trade {
+    background: rgba(139, 0, 0, 0.12);
+    border: 1px solid rgba(139, 0, 0, 0.3);
+    color: #8B0000;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 100px;
+    display: inline-block;
   }
 }
