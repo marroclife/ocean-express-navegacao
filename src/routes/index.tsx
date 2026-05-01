@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion, type Variants } from 'framer-motion'
 import { FileCheck, Route, Handshake, MapPin, MessageCircle, CheckCircle, ArrowRight, Anchor, AlertTriangle, Users } from 'lucide-react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { useEffect } from 'react'
@@ -72,12 +72,12 @@ export default function Home() {
     return () => clearInterval(interval)
   }, [emblaApi])
 
-  const fadeUp = {
+  const fadeUp: Variants = {
     hidden: { opacity: 0, y: 48 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.85, ease: 'easeOut' } },
   }
 
-  const stagger = {
+  const stagger: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.12 } },
   }
